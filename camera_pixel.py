@@ -11,7 +11,7 @@ mlx = adafruit_mlx90640.MLX90640(i2c)
 print("MLX addr detected on I2C", [hex(i) for i in mlx.serial_number])
 
 # set camera refresh rate
-mlx.refresh_rate = adafruit_mlx90640.RefreshRate.REFRESH_2_HZ
+mlx.refresh_rate = adafruit_mlx90640.RefreshRate.REFRESH_8_HZ
 
 # set initial frame [initial value]*length
 frame = [0] * 768
