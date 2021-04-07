@@ -18,7 +18,7 @@ while True:
         x += 1
         if (x % 10) == 0:
             print(frame)
-            with open(f"image_hi{x % 10}.txt", "w")as f:
+            with open(f"image_hi{x / 10}.txt", "w")as f:
                 for h in range(24):
                     for w in range(32):
                         t = frame[h * 32 + w]
