@@ -17,7 +17,7 @@ while True:
     try:
         mlx.getFrame(frame)
         if (x % 10) == 0:
-            with open(f"image_nopp{x % 10}.txt")as f:
+            with open(f"image_hi{x % 10}.txt", "w")as f:
                 for h in range(24):
                     for w in range(32):
                         t = frame[h * 32 + w]
@@ -25,7 +25,7 @@ while True:
                     f.write("\n")
 
     except ValueError:
-       # these happen, no biggie - retry
-      continue
+        # these happen, no biggie - retry
+        continue
 
     print(frame)
