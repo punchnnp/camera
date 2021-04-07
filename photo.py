@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use("TkAgg")
 image = []
 # open file from directory
 with open("image_hi1.0.txt", "r")as f:
