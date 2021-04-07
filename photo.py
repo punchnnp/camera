@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 image = []
 # open file from directory
-with open("image_hi0.0.txt", "r")as f:
+with open("image_hi1.0.txt", "r")as f:
     # separate value into list
     file = f.read().split(",")
     # make image to 2d array
