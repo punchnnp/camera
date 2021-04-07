@@ -16,7 +16,7 @@ mlx.refresh_rate = adafruit_mlx90640.RefreshRate.REFRESH_2_HZ
 # set initial frame [initial value]*length
 frame = [0] * 768
 x = 0
-while x <= 10:
+while True:
 
     try:
         mlx.getFrame(frame)
