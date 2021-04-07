@@ -20,6 +20,7 @@ while True:
     t1 = time.monotonic()
     try:
         mlx.getFrame(frame)
+        time.sleep(1)
         data_array = (np.reshape(frame, mlx_shape))
         therm1.set_data(np.fliplr(data_array))
         therm1.set_clim(vmin=np.min(data_array), vmax=np.max(data_array))
