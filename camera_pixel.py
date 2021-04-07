@@ -1,4 +1,3 @@
-import time
 import board
 import busio
 import adafruit_mlx90640
@@ -13,19 +12,19 @@ mlx.refresh_rate = adafruit_mlx90640.RefreshRate.REFRESH_2_HZ
 frame = [0] * 768
 x = 0
 while True:
-    x += 1
+
     try:
         mlx.getFrame(frame)
+        x += 1
         if (x % 10) == 0:
+            print(frame)
             with open(f"image_hi{x % 10}.txt", "w")as f:
                 for h in range(24):
                     for w in range(32):
                         t = frame[h * 32 + w]
-                        f.write(t)
+                        f.write(str(t))
                     f.write("\n")
 
     except ValueError:
         # these happen, no biggie - retry
         continue
-
-    print(frame)
