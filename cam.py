@@ -3,6 +3,8 @@ import numpy as np
 import adafruit_mlx90640
 import matplotlib.pyplot as plt
 from scipy import ndimage
+import matplotlib
+matplotlib.use("TkAgg")
 
 i2c = busio.I2C(board.SCL, board.SDA, frequency=400000) # setup I2C
 mlx = adafruit_mlx90640.MLX90640(i2c) # begin MLX90640 with I2C comm
